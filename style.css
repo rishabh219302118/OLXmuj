@@ -53,6 +53,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .product {
@@ -184,6 +186,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    
 }
 
 header h1 {
@@ -202,10 +205,15 @@ main {
 /* Login Form Styles */
 .login-form {
     text-align: center;
+    
 }
 
 .form-group {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 label {
@@ -231,11 +239,10 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
 }
 
-button:hover {
-    background-color: #0056b3;
-}
+
 
 /* Footer Styles */
 footer {
@@ -250,4 +257,22 @@ footer {
     main {
         width: 90%;
     }
+}
+
+.gobckbtn{
+    height: 50px;
+    width: 50px;
+    
+    
+}
+
+.gobckbtn img{
+    scale: 4;
+}
+
+.gobckbtn img:hover{
+    filter: invert();
+}
+.login-form button:hover{
+    background-color: green;
 }

@@ -27,3 +27,7 @@ function validateForm() {
     // Validation passed, allow form submission
     return true;
 }
+
+function goBack() {
+    window.history.back(); // This will go back to the previous page in the browsing history.
+}

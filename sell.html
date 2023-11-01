@@ -1,59 +1,111 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>OLX-MUJ</title>
-        <style>
-    .button {
-      display: inline-block;
-      padding: 15px 25px;
-      font-size: 24px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      outline: none;
-      color: #fff;
-      background-color: #007BFF;
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 9px #999;
-    }
-    
-    .button:hover {background-color: #3e8e41}
-    
-    .button:active {
-      background-color: #3e8e41;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-    }
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OLX-MUJ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .banner img {
+            max-width: 100%;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form textarea,
+        form input[type="file"] {
+            width: 96%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        form input[type="file"] {
+            padding: 5px;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+       
+
     </style>
-    </head>
-    <body>
+</head>
+<body>
     <header>
-      <h1>OLX-MUJ</h1>
-    
-  </header>
+        <h1>OLX-MUJ</h1>
+    </header>
 
-
-  <div class="banner">
-      <img src="data:image/jpeg;base64,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" alt="Banner Image">
+    <div class="banner">
+        <img src="truck2.gif" alt="Banner Image">
     </div>
-    <br>
+
     <form>
-    <label for="product_name">Enter product name :-</label><br>
-    <input type="text" id="product_name" name="product_name" style="width:20%;"><br><br>
-    <label for="product_desc">Enter product description :-</label><br>
-    <input type ="text-area" id="product_desc" name="product_desc" style="width:50%;"><br>
-    <br>
-    <label for="picture">Upload picture :-</label><br>
-    <input type="file" id="picture" name="picture"><br><br>
-    <label for="price">Enter price :-</label>
-    <input type="number" id="price" name="price" min="1"><br><br>
-    <button onclick="upload()">Sell</button>
+        <label for="product_name">Enter product name:</label>
+        <input type="text" id="product_name" name="product_name">
+
+        <label for="product_desc">Enter product description:</label>
+        <textarea id="product_desc" name="product_desc"></textarea>
+
+        <label for="picture">Upload picture:</label>
+        <input type="file" id="picture" name="picture">
+
+        <label for="price">Enter price:</label>
+        <input type="number" id="price" name="price" min="1">
+
+        <button onclick="upload">Sell</button>
+      
     </form>
-	<script src="script2.js"></script>
-  </body>
+</body>
 </html>

@@ -57,6 +57,7 @@ body, h1, h2, p, ul, li, button {
 
 h2{
     width: 100%;
+    text-align: center;
 }
 
 body {

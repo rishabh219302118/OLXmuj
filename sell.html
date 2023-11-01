@@ -99,10 +99,14 @@
         <textarea id="product_desc" name="product_desc"></textarea>
 
         <label for="picture">Upload picture:</label>
-        <input type="file" id="picture" name="picture">
+        <input type="file" id="picture" name="picture" required>
 
         <label for="price">Enter price:</label>
-        <input type="number" id="price" name="price" min="1">
+        <input type="number" id="price" name="price" min="1" required>
+
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="(\+91)?[0-9]{10}" title="Enter a valid phone number starting with +91, followed by 10 digits">
+        
 
         <button onclick="upload">Sell</button>
       

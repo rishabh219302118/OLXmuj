@@ -11,6 +11,16 @@
             background-color: #f2f2f2;
         }
 
+        .form-row{
+            display: flex;
+            
+        }
+
+        .form-group{
+            padding: 0px 30px 0px 30px;
+            margin-bottom: 0px;
+        }
+
         header {
             background-color: #007BFF;
             color: #fff;
@@ -94,23 +104,38 @@
 
     <form>
         <label for="product_name">Enter product name:</label>
-        <input type="text" id="product_name" name="product_name">
-
+        <input type="text" id="product_name" name="product_name" required>
+    
         <label for="product_desc">Enter product description:</label>
-        <textarea id="product_desc" name="product_desc"></textarea>
-
-        <label for="picture">Upload picture:</label>
-        <input type="file" id="picture" name="picture" required>
-
+        <textarea id="product_desc" name="product_desc" required></textarea>
+    
+        <div class="form-row">
+            <div class="form-group">
+                <label for="category">Choose a category:</label>
+                <select id="category" name="category">
+                    <option value="electronics">Electronics</option>
+                    <option value="food">Food Items</option>
+                    <option value="stationery">Stationery</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="utensils">Utensils</option>
+                    <option value="extra">Extra</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="picture">Upload picture:</label>
+                <input type="file" id="picture" name="picture" required>
+            </div>
+        </div>
+    
         <label for="price">Enter price:</label>
         <input type="number" id="price" name="price" min="1" required>
-
+    
         <label for="phone">Phone number:</label>
         <input type="tel" id="phone" name="phone" required pattern="(\+91)?[0-9]{10}" title="Enter a valid phone number starting with +91, followed by 10 digits">
-        
-
-        <button onclick="upload">Sell</button>
-      
+    
+        <button type="submit">Sell</button>
     </form>
+    
+    
 </body>
 </html>

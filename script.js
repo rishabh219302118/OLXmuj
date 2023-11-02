@@ -28,6 +28,17 @@ function validateForm() {
     return true;
 }
 
+// JavaScript code to show and hide the pop-up
+
+document.getElementById('contact-seller').addEventListener('click', function() {
+    document.getElementById('contact-popup').style.display = 'block';
+});
+
+document.getElementById('close-popup').addEventListener('click', function() {
+    document.getElementById('contact-popup').style.display = 'none';
+});
+
+
 function goBack() {
     window.history.back(); // This will go back to the previous page in the browsing history.
 }

@@ -87,10 +87,12 @@
             cursor: pointer;
             width: 100%;
             margin-top: 10px;
+            
         }
 
         form button:hover {
-            background-color: #0056b3;
+            background-color: #33b300;
+            
         }
 
         .uploadpicture{
@@ -134,7 +136,25 @@ input[type="file"] {
 .clickpicture:hover {
     color: #3e8e41;
 }
+/* Style for the form */
 
+
+/* Style for the form elements within the form */
+form input, form textarea, form select, form button {
+    margin: 10px 0;
+    padding: 10px;
+    
+    border-radius: 5px;
+}
+
+/* Style for form elements on focus */
+form input:focus, form textarea:focus, form select:focus, form button:focus {
+    outline: none;
+    border: 1px solid #3e8e41; /* Darker blue on focus */
+    box-shadow: 0 0 10px rgba(0, 81, 255, 0.7); /* Blue glowing shadow on focus */
+}
+
+/* Your other CSS styles... */
 
        
 
@@ -149,8 +169,8 @@ input[type="file"] {
     <div class="banner">
         <img src="truck2.gif" alt="Banner Image">
     </div>
-
-    <form>
+    <div >
+    <form class="box">
         <label for="product_name">Enter product name:</label>
         <input type="text" id="product_name" name="product_name" required>
     
@@ -185,6 +205,7 @@ input[type="file"] {
     
         <button type="submit">Sell</button>
     </form>
+    </div>
     
     
 </body>

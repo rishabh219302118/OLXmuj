@@ -115,11 +115,26 @@
 input[type="file"] {
     display: none;
 }
+.clickpicture{
+    display: flex;
+    justify-content: start;
+    align-items: first baseline;
+    cursor: pointer;
+    color: #007BFF;
+}
+
 .uploadpicture{
     display: flex;
     justify-content: start;
     align-items: first baseline;
 }
+
+
+/* Change the label's color on hover */
+.clickpicture:hover {
+    color: #3e8e41;
+}
+
 
        
 
@@ -127,7 +142,7 @@ input[type="file"] {
 </head>
 <body>
   <header>
-    <button class="gobckbtn" onclick="goBack()"><img src="go-back-2.png"></button>
+    
     <h1>Welcome to OLX-MUJ</h1>
 </header>
 
@@ -155,15 +170,15 @@ input[type="file"] {
                 </select>
             </div>
             <div class="form-group uploadpicture">
-                <label for="picture">Upload picture:</label>
+                <label for="picture" class="clickpicture">Click Here To Upload Picture</label>
 <input type="file" id="picture" name="picture" required>
-<span class="file-label">Choose a Product Photo</span>
+<span class="file-label"></span>
 
             </div>
         </div>
     
         <label for="price">Enter price:</label>
-        <input type="number" id="price" name="price" min="1" required>
+        <input type="number" id="price" name="price" min="1" max="50000" required>
     
         <label for="phone">Phone number:</label>
         <input type="tel" id="phone" name="phone" required pattern="(\+91)?[0-9]{10}" title="Enter a valid phone number starting with +91, followed by 10 digits">

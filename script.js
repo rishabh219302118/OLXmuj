@@ -42,3 +42,54 @@ document.getElementById('close-popup').addEventListener('click', function() {
 function goBack() {
     window.history.back(); // This will go back to the previous page in the browsing history.
 }
+
+// Function to show the popup
+function showPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+}
+
+// Function to close the popup
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+// Simulated function for selling a product
+function sellProduct() {
+    // Perform any necessary backend logic here (this is a simplified example)
+
+    // Show the popup after selling the product
+    showPopup();
+}
+// Function to validate the form
+function validateForm() {
+    // Add your form validation logic here
+    // Return true if validation passes, false otherwise
+    // For demonstration purposes, always returning true
+    return true;
+}
+
+// Function to show the popup
+function showPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+}
+
+// Function to close the popup
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+// Function to handle selling a product
+function sellProduct() {
+    // Validate the form
+    if (validateForm()) {
+        // Perform any necessary backend logic here (this is a simplified example)
+
+        // Show the popup after selling the product
+        showPopup();
+    }
+}
+

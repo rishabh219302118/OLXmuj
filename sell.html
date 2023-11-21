@@ -203,9 +203,17 @@ form input:focus, form textarea:focus, form select:focus, form button:focus {
         <label for="phone">Phone number:</label>
         <input type="tel" id="phone" name="phone" required pattern="(\+91)?[0-9]{10}" title="Enter a valid phone number starting with +91, followed by 10 digits">
     
-        <button type="submit">Sell</button>
+        <button onclick="sellProduct()" type="submit">Sell</button>
     </form>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Your product has been listed. You will be contacted soon if anyone is interested in buying.</p>
+        </div>
     </div>
+    </div>
+
+    <script src="script.js"></script>
     
     
 </body>

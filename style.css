@@ -399,11 +399,7 @@ body{
 	background-color: #ffffff;
 	overflow-x: hidden;
 }
-.container{
-display: flex;
-justify-content: center;
-align-items: center;
-}
+.container{display: flex;justify-content: center;align-items: center;transform: translate(7px, 10px);}
 
 a {
 	cursor: pointer;
@@ -424,6 +420,7 @@ p {
   line-height: 1.7;
 }
 h4 {
+  transform: t;
   font-weight: 600;
 }
 h6 span{
@@ -522,6 +519,9 @@ h6 span{
   backface-visibility: hidden;
   box-shadow: #001b75;
 }
+
+
+
 .card-back {
   transform: rotateY(180deg);
 }
@@ -691,3 +691,65 @@ h6 span{
 	width: auto;
 	display: block;
 }
+/* Your existing CSS styles go here */
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+    body {
+      text-align: center;
+    }
+
+    .section text-center{
+        display: flex;
+        justify-content: center;
+    }
+  
+    header {
+      padding: 0.5em;
+    }
+  
+    .section {
+      padding: 20px;
+      width: 333px;
+    }
+  
+    .card-3d-wrap {
+      width: 100%;
+    }
+  h4{
+    transform: translate(-47px, 10px);
+  }
+    .card-3d-wrapper {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+  
+    .card-front,
+    .card-back {
+      width: 100%;
+    }
+  
+    .center-wrap {
+        padding: 20px;
+        height: 503px;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    .form-style {
+        width: 84%;
+        padding: 10px;
+        transform: translate(-39px, 10px);
+    }
+    }
+  
+    .btn {
+      padding: 10px 20px;
+    }
+  
+    /* Add any other mobile-specific styles here */
+  
+  

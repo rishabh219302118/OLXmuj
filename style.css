@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.beetch{
+    
+}
+
 /* Apply styles to the labels */
 .form-group label {
     display: block;
@@ -92,7 +96,9 @@
 
 /* Your other CSS styles... */
 
-
+.section textarea{
+    transform: translate(-7px, -14px);
+}
 
 body, h1, h2, p, ul, li, button {
    
@@ -683,14 +689,14 @@ h6 span{
     transition: all 200ms linear;
 }
 
-.btn{  
+.btn{
   border-radius: 4px;
   height: 44px;
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   -webkit-transition : all 200ms linear;
-  transition: all 200ms linear;
+  /* transition: all 200ms linear; */
   padding: 0 30px;
   letter-spacing: 1px;
   display: -webkit-inline-flex;
@@ -745,20 +751,27 @@ h6 span{
 @media only screen and (max-width: 767px) {
     body {
       text-align: center;
+      
+    }
+    .beetch{
+        transform: translate(-201px, -132px);
     }
 
     .section text-center{
-        display: flex;
-        justify-content: center;
+       
+        
+        transform: translate(-1px, -30px);
+        
     }
   
-    header {
-      padding: 0.5em;
-    }
-  
+   
     .section {
       padding: 20px;
       width: 333px;
+      scale: .9;
+      position: absolute;
+      
+      
     }
   
     .card-3d-wrap {
@@ -777,6 +790,10 @@ h6 span{
     .card-front,
     .card-back {
       width: 100%;
+      height: 530px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   
     .center-wrap {

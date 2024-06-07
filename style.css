@@ -10,9 +10,12 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+*{
+  font-family: Montserrat;
+}
 
-.beetch{
-    
+.section pb-5 pt-5 pt-sm-2 text-center{
+  
 }
 
 /* Apply styles to the labels */
@@ -215,6 +218,12 @@ footer {
     height: auto;
 }
 
+.loginbutton{
+  font-size: 30px;
+  color: rgb(76, 0, 255);
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
 
 .sell-button {
     position: fixed;
@@ -227,15 +236,25 @@ footer {
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    text-align: center;
+    text-align:center;
     font-size: 40px;
     transform: translate(0px, 20px);
+}
+
+.writesell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sell-button:hover {
     background-color: #0056b3;
 }
 
+.sell-button a{
+  
+  transform: translate(0px, -10px);
+}
 
 .menu-icon .line {
     width: 30px;

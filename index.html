@@ -5,84 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>OLXmuj</title>
-    
 </head>
+<script>
+    function openLoginPage() {
+    window.location.href = "login.html";
+}
+
+function contactSeller(name, phone, product) {
+    const sellerInfo = document.getElementById('seller-info');
+    sellerInfo.textContent = `Seller Name: ${name}\nPhone Number: ${phone}\nProduct: ${product}`;
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+
+}
+
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+function sellProduct() {
+    const form = document.getElementById('productForm');
+    if (form.checkValidity()) {
+        // Normally you would handle form submission here
+        alert('Your product has been listed. You will be contacted soon if anyone is interested in buying.');
+        window.location.href = "list.html";  // Redirect after submitting the form
+    } else {
+        form.reportValidity();  // Show validation errors if any
+    }
+    return false;  // Prevent actual form submission
+}
+
+</script>
 <body>
     <header>
         <button class="loginbutton" onclick="openLoginPage()">Login</button>
-        
-        <h1>Welcome to OLX-MUJ</h1>
-      
+        <h1>Welcome to OLX </h1><h1 style="color: rgb(253, 171, 49);">MUJ</h1>
     </header>
-
 
     <div class="banner">
         <img src="truck2.gif" alt="Banner Image">
     </div>
-<h2>
-    Buy OR Sell
-</h2>
+
+    <h2>Buy OR Sell</h2>
     <main>
         <section class="product-listing">
             <article class="product">
                 <img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-anywhere-3s/product-gallery/graphite/mx-anywhere-3s-mouse-top-view-graphite.png" alt="Product 1">
                 <h2>Product 1</h2>
-                <p>Description of Product 1.</p>
+                <p>Description of Product 1</p>
                 <p>Price: RS.1000</p>
-                <button>Contact Seller</button>
+                <button onclick="contactSeller('rishabh', '+91-9876543210', 'Product 1')">Contact Seller</button>
             </article>
+            
             <!-- Add more product articles here -->
             <article class="product">
-                <img src="https://pngimg.com/uploads/pen/pen_PNG7417.png" alt="Product 1">
-                <h2>Product 1</h2>
-                <p>Description of Product 1.</p>
+                <img src="https://pngimg.com/uploads/pen/pen_PNG7417.png" alt="Product 2">
+                <h2>Product 2</h2>
+                <p>Description of Product 2</p>
                 <p>Price: RS.10</p>
-                <button>Contact Seller</button>
+                <button onclick="contactSeller('pokimon', '+91-9876543211', 'Product 2')">Contact Seller</button>
             </article>
             <!-- Add more product articles here -->
-            <article class="product">
-                <img src="https://i.pinimg.com/originals/8b/6d/83/8b6d83fb56ddb329d4656168533d6816.png" alt="Product 1">
-                <h2>Product 1</h2>
-                <p>Description of Product 1.</p>
-                <p>Price: RS.12</p>
-                <button>Contact Seller</button>
-            </article>
+            
             <!-- Add more product articles here -->
             <article class="product">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2020/11/RS/AU/JV/23307659/plastic-file-folder-500x500.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p>Description of Product 1.</p>
-                <p>Price: RS.100</p>
-                <button>Contact Seller</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEZ8dFJXYautvCa-rguVyN52S6HH6pNZGsSbnKOpVp0qbCgWXs1ZTSvRUMuHha15yPJVQ&usqp=CAU" alt="Product 2">
+                <h2>Product 3</h2>
+                <p>Description of Product 3</p>
+                <p>Price: RS.10</p>
+                <button onclick="contactSeller('raheem', '+91-9876543211', 'Product 3)">Contact Seller</button>
             </article>
             <!-- Add more product articles here -->
-            <article class="product">
-                <img src="https://5.imimg.com/data5/IZ/MB/JO/SELLER-4376914/tomato-catchup.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p>Description of Product 1.</p>
-                <p>Price: RS.70</p>
-                <button>Contact Seller</button>
-            </article>
+          
             <!-- Add more product articles here -->
             <article class="product">
-                <img src="https://www.seekpng.com/png/detail/134-1340018_fight-club-png-fight-club-soap-png.png" alt="Product 1">
-                <h2>Product 1</h2>
-                <p>Description of Product 1.</p>
-                <p>Price: RS.100</p>
-                <button>Contact Seller</button>
+                <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/bicycle-playing-cards-pack-o0QQEx6-600.jpg" alt="Product 2">
+                <h2>Product 4</h2>
+                <p>Description of Product 4</p>
+                <p>Price: RS.10</p>
+                <button onclick="contactSeller('ram', '+91-9876543211', 'Product 4')">Contact Seller</button>
+            </article>
+            <!-- Add more product articles here -->
+           
+            <!-- Add more product articles here -->
+            <article class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3GnnnIko1BOvQ0R8nu28r8DnVHNKGwd558EgAeTIbLBXlx75YyS5pJUIBUwki3T8ES5k&usqp=CAU" alt="Product 2">
+                <h2>Product 5</h2>
+                <p>Description of Product 5</p>
+                <p>Price: RS.10</p>
+                <button onclick="contactSeller('rahul', '+91-9876543211', 'Product 5')">Contact Seller</button>
             </article>
             <!-- Add more product articles here -->
         </section>
-    </main>
-    
+    </main> 
+
     <div class="sell-button">
         <div class="writesell">
-        <a href="sell.html">SELL</a>
+            <a style="color: aliceblue;" href="sell.html">SELL</a>
+        </div>
     </div>
-</div>
-    <footer>
-        <p>&copy; 2023 OLX Clone</p>
-    </footer>
+
+    <footer></footer>
+
+    <!-- Popup container -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="seller-info"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
